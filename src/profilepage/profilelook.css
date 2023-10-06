@@ -1,0 +1,108 @@
+* { box-sizing: border-box; font-family:Arial, Helvetica, sans-serif;}
+
+body{
+    background: rgb(16,6,190);
+    background: linear-gradient(90deg, rgba(16,6,190,1) 0%, rgba(25,41,214,1) 42%, rgba(16,107,254,1) 100%);
+}
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;;
+}
+.profile-container{
+    width: 40rem;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 1rem;
+    border: 5px outset #1929d6;
+    padding: 0;
+    background-color: white;
+}
+
+h3:first-child{
+    margin-top: 0;
+}
+
+#toggle{
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    border: 0 outset #1929d6;
+    padding: 0;
+    margin: 0;
+    color: #1929d6;
+    background-color: white;
+}
+
+#profile, #edit-form{
+    margin: 1rem 0;
+    display: none;
+}
+
+#edit-profile{
+  margin-top: 1rem;
+}
+
+#toggle:hover{
+    cursor: pointer;
+}
+
+#icon{
+    max-width: 5em; 
+    max-height: 5em;
+}
+
+.draggable-element {
+    cursor: move;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 20px;
+    display: inline-block;
+  }
+  
+  .droppable-area {
+    border: 1px solid black;
+    margin: auto;
+    padding: 1rem;
+    height: 10rem;
+    width: 20rem;
+  }
+  h4{
+    padding-bottom: 1rem;
+    margin: 0;
+    font-weight: lighter;
+  }
+  .remove-subject {
+    color: red;
+    cursor: pointer;
+  }
+
+  #icon{
+    height: 2rem;
+    width: 2rem;
+  }
+
+  button{
+    cursor: pointer;
+  }
+
+  .form-group{
+    margin-bottom: 1rem;
+  }
+  
+table{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+tr{
+  border: 1px solid black;
+  padding: 0.2rem;
+}
+td{
+  border: 1px solid black;
+  padding: 0.2rem;
+}

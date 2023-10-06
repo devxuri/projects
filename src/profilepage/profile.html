@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Page</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="profilelook.css">
+</head>
+<body>
+  <main>
+    <div class="profile-container">
+      <button id="toggle">Profile</button>
+    <section id="profile">
+      <h3>Profile picture</h3>
+      <img id="icon" src="../assets/profile-icon.webp">
+      <h3>Name</h3>
+      <p id="profile-name">Suryaansh Maithani</p>
+      <h3>Age</h3>
+      <p id="profile-age">18</p>
+      <h3>Subjects</h3>
+      <div id="profile-subjects">
+        <p>Computer Science</p>
+      </div>
+      <table id="subjectsTable">
+      </table>
+      <button id="edit-profile">Edit</button>
+    </section>
+    <form id="edit-form">
+      <article class="form-group">
+        <label for="name-input">Name</label>
+        <br>
+        <input type="text" id="name-input"><br>
+      </article>
+      <article class="form-group">
+        <label for="age-input">Age</label>
+        <br>
+      <input type="number" id="age-input"><br>
+      </article>
+      <article class="form-group">
+        <label for="department-input">Work department</label>
+        <div id="available-subjects" class="droppable-area">
+          <h4>Available Subjects</h2>
+          <li id="science" class="draggable-element" data-id="science">Science</li>
+          <li id="history" class="draggable-element" data-id="history">History</li>
+          <li id="english" class="draggable-element" data-id="english">English</li>
+          <li id="maths" class="draggable-element" data-id="maths">Maths</li>
+        </div>
+        <div id="my-subjects" class="droppable-area">
+          <h4>My Subjects</h2>
+            <li id="computerscience" class="draggable-element" data-id="computerscience">Computer Science</li>
+        </div>
+      </article>
+      <button id="save-edit">Save</button>
+      <button id="cancel-edit">Cancel</button>
+    </form>
+    </div>
+  </main>
+  <script src="profilefeature.js"></script>
+  <script src="draggablefeature.js"></script>
+</body>
+</html>

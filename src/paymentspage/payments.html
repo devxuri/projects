@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../assets/loadstyle.css">
+    <script src="../assets/loader.js"></script>
+    <title>Payments page</title>
+</head>
+
+<body onload="showLoader()">
+    <div id="loader"></div> 
+    <div style="display:none;" id="myDiv" class="grid-container animate-bottom">
+        <aside class="grid-item-sidebar">
+            <figure id="logo">
+                <svg width="100%" height="100%" viewBox="0 0 80 34" preserveAspectRatio="yes" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M26.0672 3.7136C26.0672 5.76373 24.4016 7.42543 22.3465 7.42543C20.2915 7.42543 18.6259 5.76373 18.6259 3.7136C18.6259 1.66346 20.2915 0.0017644 22.3465 0.0017644C24.4016 -0.019816 26.0672 1.64188 26.0672 3.7136Z" fill="#1929D6"/>
+                    <path d="M15.8785 9.08593V14.5889H9.47541V23.7175C9.47541 25.746 10.4056 26.5445 12.5039 26.5445H15.9001V31.8101H12.0712C6.03593 31.8101 3.3103 29.1126 3.3103 24.0196V14.5889H0.000610352V9.08593C1.8177 9.08593 3.28867 7.61846 3.28867 5.80571V3.23764H9.45378V9.08593H15.8785V9.08593Z" fill="#1929D6"/>
+                    <path d="M25.418 9.08551H19.2529V31.8097H25.418V9.08551Z" fill="#1929D6"/>
+                    <path d="M46.3792 30.1492C44.7785 31.4009 42.2908 32.1346 39.7166 32.1346C33.5082 32.1346 28.2084 27.1279 28.2084 20.5675C28.2084 14.007 33.4866 8.8709 39.7166 8.8709C42.2908 8.8709 44.7785 9.66937 46.3792 10.8995V1.46881H52.5443V31.8325H46.3792V30.1492ZM46.4657 20.5675C46.4657 17.2009 43.7185 14.4602 40.2574 14.4602C36.8828 14.4602 34.2653 17.2009 34.2653 20.5675C34.2653 23.9772 36.8828 26.6747 40.2574 26.6747C43.805 26.6747 46.4657 23.9772 46.4657 20.5675Z" fill="#1929D6"/>
+                    <path d="M66.6053 32.3524C59.3154 32.3524 54.6212 27.2594 54.6212 20.5263C54.6212 13.9659 59.51 8.65707 66.6486 8.65707C73.852 8.65707 78.2 13.6206 78.2 20.2242C78.2 21.109 78.1135 22.2527 78.1135 22.4038H60.6998C61.3704 25.274 63.5336 27.1515 66.7351 27.1515C69.4824 27.1515 71.4941 25.9646 72.7704 24.1302L77.3997 26.9573C75.1932 30.2806 71.6672 32.3524 66.6053 32.3524ZM60.9161 17.8288H71.97C71.2995 15.088 69.093 13.7069 66.6053 13.7069C63.7283 13.7069 61.7165 15.2607 60.9161 17.8288Z" fill="#1929D6"/>
+                </svg>
+            </figure>
+            <div class="grid-item-sidebar-pages">
+                <a id="startup" href="#startup">Startup Hub</a>
+                <a id="accounts" href="#accounts">Accounts</a>
+                <a id="payments" href="#payments" class="active">Payments</a>
+                <a id="invoice" href="#invoice"> Invoice</a>
+                <a id="tools" href="#tools">Tools & Services</a>
+            </div>
+        </aside>
+        <main class="grid-item-main">
+            <header>
+                <h1>Payments</h1>
+            </header>
+            <hr>
+            <section>
+                <div class="payment-form-container">
+                    <form id="payment-form">
+                        <label for="fmaccount"><i class="fm fm-from"></i> From</label>
+                        <select name = "fmaccount" id="fmaccount">
+                            <option value = "Tide Account" selected>Tide Current Account &#x0a;236972 | 03505421</option>
+                            <option value = "outside">Outside Account</option>
+                            <option value = "none">None</option>
+                        </select>
+                        <p>Available Balance: £0.00</p>
+                        <br>
+                        <label for="fmto"><i class="fm fm-to"></i> To</label>
+                        <input type="text" id="fmto" name="fmto" placeholder="Select payee">
+                        <label for="fmamount"><i class="fm fm-amt"></i> Amount </label>
+                        <input type="text" id="fmamount" name="fmamount" placeholder="£">
+                        <label for="fmref"><i class="fm fm-ref"></i> Reference </label>
+                        <input type="text" id="fmref" name="fmref" placeholder="Enter reference">
+                        <label for="fmfreq"><i class="fm fm-freq"></i> Frequency </label>
+                        <select name = "fmfreq" id="fmfreq">
+                            <option value = "once" selected>Just once</option>
+                            <option value = "daily">Daily</option>
+                            <option value = "never">Never</option>
+                        </select>
+                        <label for="fmdate"><i class="fm fm-date"></i> Date </label>
+                        <select name = "fmdate" id="fmdate">
+                            <option value = "immediatly" selected>Immediatly</option>
+                            <option value = "tomorrow">Tomorrow</option>
+                            <option value = "nextmonth">Next month</option>
+                        </select>
+                        <br>
+                        <input type="submit" value="Submit" class="btn">
+                    </form>
+                </div>
+            </section>
+            <hr>
+            <footer id="payment-history">
+                <script src="submitfunction.js"></script>
+            </footer>
+    </main>
+    <div class= "form-modal-container">
+    </div>
+    <script src="cardclicker.js"></script>  
+  </div>
+</body>
+</html>
